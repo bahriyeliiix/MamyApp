@@ -3,27 +3,29 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35208.52
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MamyApp", "MamyApp\MamyApp.csproj", "{5759335A-260C-4516-BA30-9BC21DBAF276}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MamyApp", "MamyApp\MamyApp.csproj", "{5759335A-260C-4516-BA30-9BC21DBAF276}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MamyApp.Core", "MamyApp.Core\MamyApp.Core.csproj", "{DA790293-E75D-4D35-BE5A-2526D7EAE6A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MamyApp.Core", "MamyApp.Core\MamyApp.Core.csproj", "{DA790293-E75D-4D35-BE5A-2526D7EAE6A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MamyApp.Infrastructure", "MamyApp.Infrastructure\MamyApp.Infrastructure.csproj", "{EBF31225-68B6-4C38-A63D-7E47C3119F2C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MamyApp.Infrastructure", "MamyApp.Infrastructure\MamyApp.Infrastructure.csproj", "{EBF31225-68B6-4C38-A63D-7E47C3119F2C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MamyApp.API", "MamyApp.API\MamyApp.API.csproj", "{070842B7-6D21-4CDF-8484-6A85E99F064C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MamyApp.API", "MamyApp.API\MamyApp.API.csproj", "{070842B7-6D21-4CDF-8484-6A85E99F064C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MamyApp.Tests", "MamyApp.Tests\MamyApp.Tests.csproj", "{2EC9EB9B-3342-402B-AF37-CEFC8532AD77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MamyApp.Web", "MamyApp.Web\MamyApp.Web.csproj", "{7F65831D-35A8-4B39-AFD4-0F5B1D401508}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MamyApp.Web", "MamyApp.Web\MamyApp.Web.csproj", "{7F65831D-35A8-4B39-AFD4-0F5B1D401508}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MamyApp.SignalR", "MamyApp.SignalR\MamyApp.SignalR.csproj", "{D10759D7-AA04-41C2-AA7D-CCB140CFA983}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MamyApp.SignalR", "MamyApp.SignalR\MamyApp.SignalR.csproj", "{D10759D7-AA04-41C2-AA7D-CCB140CFA983}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MamyApp.Redis", "MamyApp.Redis\MamyApp.Redis.csproj", "{238E966A-6C18-480B-9D8A-C86F47D0D9BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MamyApp.Redis", "MamyApp.Redis\MamyApp.Redis.csproj", "{238E966A-6C18-480B-9D8A-C86F47D0D9BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MamyApp.MessageQueue", "MamyApp.MessageQueue\MamyApp.MessageQueue.csproj", "{FBDDCC34-73AB-412D-A2DE-B663BE00D593}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MamyApp.MessageQueue", "MamyApp.MessageQueue\MamyApp.MessageQueue.csproj", "{FBDDCC34-73AB-412D-A2DE-B663BE00D593}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MamyApp.Identity", "MamyApp.Identity\MamyApp.Identity.csproj", "{5AADF669-0AD2-4C72-9609-31705F2D9776}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MamyApp.Identity", "MamyApp.Identity\MamyApp.Identity.csproj", "{5AADF669-0AD2-4C72-9609-31705F2D9776}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MamyApp.Logging", "MamyApp.Logging\MamyApp.Logging.csproj", "{EE06C7A8-7AED-448C-B63F-AA0FFDC703E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MamyApp.Logging", "MamyApp.Logging\MamyApp.Logging.csproj", "{EE06C7A8-7AED-448C-B63F-AA0FFDC703E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MamyApp.Application", "MamyApp.Application\MamyApp.Application.csproj", "{84B9F6F6-6F86-46E3-B43E-ABFF74D8D97F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{EE06C7A8-7AED-448C-B63F-AA0FFDC703E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE06C7A8-7AED-448C-B63F-AA0FFDC703E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE06C7A8-7AED-448C-B63F-AA0FFDC703E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84B9F6F6-6F86-46E3-B43E-ABFF74D8D97F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84B9F6F6-6F86-46E3-B43E-ABFF74D8D97F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84B9F6F6-6F86-46E3-B43E-ABFF74D8D97F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84B9F6F6-6F86-46E3-B43E-ABFF74D8D97F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
