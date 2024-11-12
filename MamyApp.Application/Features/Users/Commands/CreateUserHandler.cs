@@ -18,10 +18,19 @@ namespace MamyApp.Application.Features.Users.Commands
 
         public async Task<int> Handle(CreateUserCommand request, CancellationToken cancellationToken)
         {
-            var user = _mapper.Map<User>(request);
-            
-            await _userRepository.AddAsync(user);
-            return user.Id;
+            try
+            {
+                var user = _mapper.Map<User>(request);
+
+                await _userRepository.AddAsync(user);
+                return user.Id;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+         
         }
     }
 }
