@@ -12,7 +12,9 @@ builder.Services.AddServiceConfiguration();
 builder.Services.AddRedisConfiguration(builder.Configuration);
 builder.Services.AddSignalRConfiguration();
 builder.Services.ConfigureGeneral();
+builder.Services.AddFluentValidationServices();
 builder.Services.AddJwtAuthentication(builder.Configuration);
+
 
 
 builder.Services.AddControllers();

@@ -9,6 +9,7 @@ using MamyApp.Application.Models;
 using Microsoft.AspNetCore.Mvc;
 using MamyApp.Application.Enums;
 using System.Text.Json;
+using FluentValidation;
 
 
 namespace MamyApp.API.Controllers
@@ -20,13 +21,15 @@ namespace MamyApp.API.Controllers
         private readonly IMediator _mediator;
         private readonly IMapper _mapper;
         private readonly ILogger<UsersController> _logger;
+        private readonly IValidator<CreateUserDto> _userValidator;
 
         // Constructor
-        public UsersController(IMediator mediator, IMapper mapper, ILogger<UsersController> logger)
+        public UsersController(IMediator mediator, IMapper mapper, ILogger<UsersController> logger, IValidator<CreateUserDto> userValidator)
         {
             _mediator = mediator;
             _mapper = mapper;
             _logger = logger;
+            _userValidator = userValidator;
         }
 
         // GET api/users/{id}
@@ -59,17 +62,18 @@ namespace MamyApp.API.Controllers
             }
         }
 
-        // POST api/users
         [HttpPost]
         public async Task<IActionResult> CreateUser([FromBody] CreateUserDto createUserDto)
         {
             var createUserJson = JsonSerializer.Serialize(createUserDto);
             _logger.LogInformation("Received request to create a new user. Request Body: {RequestBody}", createUserJson);
 
-            if (!ModelState.IsValid)
+            // Fluent Validation ile DTO doğrulaması
+            var validationResult = await _userValidator.ValidateAsync(createUserDto);
+
+            if (!validationResult.IsValid)
             {
-                var validationErrors = ModelState.Values
-                    .SelectMany(v => v.Errors)
+                var validationErrors = validationResult.Errors
                     .Select(e => e.ErrorMessage)
                     .ToList();
 
@@ -96,5 +100,6 @@ namespace MamyApp.API.Controllers
                     ApiResponse<ErrorDetails>.Failure(MessageConstants.InternalServerError, HttpStatusCode.InternalServerError, new List<string> { ex.Message }));
             }
         }
+
     }
 }
