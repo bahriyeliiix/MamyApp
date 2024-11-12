@@ -10,21 +10,41 @@ namespace MamyApp.Logging.Configuration
     {
         public static void ConfigureLogging(this IServiceCollection services, IConfiguration configuration)
         {
-            // LogSettings'i appsettings.json'dan alıyoruz
             var logSettings = configuration.GetSection("LogSettings").Get<LogSettings>();
 
-            // Loglayıcıları DI konteynerine ekliyoruz
-            Log.Logger = new LoggerConfiguration()
-                .WriteTo.Console()  // Konsola yazma
-                .WriteTo.File(logSettings.LogFilePath, rollingInterval: RollingInterval.Day)  // Dosyaya yazma
-                .CreateLogger();
+            // Get the user's Documents folder path
+            var logDirectory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "MyAppLogs");
 
-            // ILogger'ı DI konteynerine ekliyoruz
-            services.AddSingleton<Serilog.ILogger>(Log.Logger);
+            // Ensure the log directory exists
+            if (!Directory.Exists(logDirectory))
+            {
+                Directory.CreateDirectory(logDirectory);
+                Console.WriteLine("Log directory created at: " + logDirectory);
+            }
 
-            // LoggingService'i DI konteynerine ekliyoruz
-            // LoggingService'i DI konteynerine ekliyoruz
-            services.AddSingleton<ILoggingService, LoggingService>();
+            // Ensure the log file path is valid
+            var logFilePath = Path.Combine(logDirectory, "log-.txt");
+
+            // Print log file path for debugging
+            Console.WriteLine($"Log File Path: {logFilePath}");
+
+            // Configure Serilog to write to a file with rolling interval
+            try
+            {
+                Log.Logger = new LoggerConfiguration()
+                    .WriteTo.File(logFilePath, rollingInterval: RollingInterval.Day, retainedFileCountLimit: 7) // Retain only the last 7 days of logs
+                    .CreateLogger();
+                services.AddSingleton<ILogger>(Log.Logger);
+                services.AddSingleton<ILoggingService, LoggingService>();
+
+                Console.WriteLine("Logger initialized successfully.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error initializing logger: " + ex.Message);
+            }
         }
+
+
     }
 }
