@@ -1,4 +1,7 @@
 ﻿
+using MamyApp.Core.Interfaces;
+using MamyApp.Infrastructure.Repositories;
+
 namespace MamyApp.API.Extensions
 {
     public static class RepositoryExtensions
@@ -6,7 +9,7 @@ namespace MamyApp.API.Extensions
         public static IServiceCollection AddRepositoryConfiguration(this IServiceCollection services)
         {
             //services.AddScoped<IProductRepository, ProductRepository>();
-            //services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
             return services;
         }
     }

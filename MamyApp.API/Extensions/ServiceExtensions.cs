@@ -8,8 +8,6 @@ namespace MamyApp.API.Extensions
     {
         public static IServiceCollection AddServiceConfiguration(this IServiceCollection services)
         {
-            //services.AddScoped<IProductService, ProductService>();
-            //services.AddScoped<IUserService, UserService>();
             return services;
         }
     }
