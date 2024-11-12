@@ -24,6 +24,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MamyApp.Application\MamyApp.Application.csproj" />
+    <ProjectReference Include="..\MamyApp.Infrastructure\MamyApp.Infrastructure.csproj" />
     <ProjectReference Include="..\MamyApp.Logging\MamyApp.Logging.csproj" />
   </ItemGroup>
 
