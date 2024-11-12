@@ -1,13 +1,11 @@
-﻿using MamyApp.Core.Enums;
+﻿using MamyApp.Core.Entities;
+using System.ComponentModel.DataAnnotations;
 
-namespace MamyApp.Core.Entities
+public class User : BaseEntity
 {
-    public class User : BaseEntity
-    {
-        public string Name { get; set; } 
-        public string Username { get; set; } 
-        public string Email { get; set; } 
-        public string Role { get; set; } 
-        public UserStatus Status { get; set; } 
-    }
+    public string Username { get; set; }
+    public string PasswordHash { get; set; }
+    public string Email { get; set; }
+    public bool IsEmailVerified { get; set; } = false;
+    public DateTime? LastLoginDate { get; set; }
 }

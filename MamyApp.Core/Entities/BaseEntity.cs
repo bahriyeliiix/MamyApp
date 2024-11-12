@@ -19,22 +19,5 @@ namespace MamyApp.Core.Entities
         public string UpdatedBy { get; set; } 
         public string DeletedBy { get; set; } 
         public string RowVersion { get; set; }  
-        public bool IsValid()
-        {
-            return true;
-        }
-
-        public void SoftDelete(string deletedBy)
-        {
-            IsDeleted = true;
-            DeletedAt = DateTime.UtcNow;
-            DeletedBy = deletedBy;
-        }
-
-        public void Update(string updatedBy)
-        {
-            UpdatedAt = DateTime.UtcNow;
-            UpdatedBy = updatedBy;
-        }
     }
 }
