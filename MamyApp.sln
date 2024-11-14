@@ -23,9 +23,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MamyApp.MessageQueue", "Mam
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MamyApp.Identity", "MamyApp.Identity\MamyApp.Identity.csproj", "{5AADF669-0AD2-4C72-9609-31705F2D9776}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MamyApp.Logging", "MamyApp.Logging\MamyApp.Logging.csproj", "{EE06C7A8-7AED-448C-B63F-AA0FFDC703E2}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MamyApp.Application", "MamyApp.Application\MamyApp.Application.csproj", "{84B9F6F6-6F86-46E3-B43E-ABFF74D8D97F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MamyApp.Application", "MamyApp.Application\MamyApp.Application.csproj", "{84B9F6F6-6F86-46E3-B43E-ABFF74D8D97F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,10 +71,6 @@ Global
 		{5AADF669-0AD2-4C72-9609-31705F2D9776}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AADF669-0AD2-4C72-9609-31705F2D9776}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5AADF669-0AD2-4C72-9609-31705F2D9776}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EE06C7A8-7AED-448C-B63F-AA0FFDC703E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EE06C7A8-7AED-448C-B63F-AA0FFDC703E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EE06C7A8-7AED-448C-B63F-AA0FFDC703E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EE06C7A8-7AED-448C-B63F-AA0FFDC703E2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{84B9F6F6-6F86-46E3-B43E-ABFF74D8D97F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{84B9F6F6-6F86-46E3-B43E-ABFF74D8D97F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84B9F6F6-6F86-46E3-B43E-ABFF74D8D97F}.Release|Any CPU.ActiveCfg = Release|Any CPU
